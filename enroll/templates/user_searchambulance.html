@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+     <link href="{% static 'css/style7.css' %}" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+ 
+        <div class="header">
+            <h1>Booking Your Ambulance </h1><br>
+            
+            <form class="d-flex" method="get" action="/search" role="search" >
+              {% csrf_token %}
+                <input class="form-control me-2" type="search" id="query" name="query" placeholder="Enter your city" aria-label="Search">  
+               
+                
+                <!-- <input class="form-control location" type="search" placeholder="Enter your city" aria-label="Search"> -->
+                <button class="btn btn-outline-success hh mx-3" type="submit">Search</button>
+              </form>
+            <!-- <div id="results-box " class="results-card invisible">text -->
+                 
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/main1.js' %}"></script>
+    <!-- <script src="{% static 'js/main1.js' %}" defer></script> -->
+    <script src="{% static 'js/jquery.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style11.css' %}" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align:center;">Hospital  registration</h1>
+
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-6"> <div class="mb-3">
+                            <label for="hname" class="form-label">Hospital name</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" name="hname">
+                        </div></div>
+                        <div class="col-6"> <div class="mb-3">
+                            <label for="validationCustom04" class="form-label">Hospital Type</label>
+                            <select class="form-select" id="validationCustom04" name="htype" required>
+                                <option selected disabled value="">....</option>
+                                <option>Private</option>
+                                <option>Goverments</option>
+                                
+                            </select>
+                        </div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6"><div class="mb-3">
+                            <label for="address" class="form-label">Hospital Address</label>
+                            <input type="text" class="form-control" name="haddress">
+                        </div></div>
+                        <div class="col-6"><div class="mb-3">
+                            <label for="ambulance_no" class="form-label">Hospital Contact No:</label>
+                            <input type="text" class="form-control" name="hcontact">
+                        </div></div>
+                       </div>
+                   <div class="row">
+                    <div class="col-6"><div class="mb-3">
+                        <label for="address" class="form-label">Hospital Email:</label>
+                        <input type="text" class="form-control" name="hemail">
+                    </div></div>
+                    <div class="col-6"><div class="mb-3">
+                        <label for="ambulance_no" class="form-label">Ambulance No</label>
+                        <input type="text" class="form-control" name="ambno">
+                    </div></div>
+                   </div>
+                    
+                   <div class="row">
+                    <div class="col-6">  <div class="mb-3">
+                        <label for="dname" class="form-label">Driver Name</label>
+                        <input type="text" class="form-control" name="dname">
+                    </div></div>
+                    <div class="col-6">  <div class="mb-3">
+                        <label for="dno" class="form-label">Driver Phone No</label>
+                        <input type="dno" class="form-control" id="exampleInputPassword1" name="dphone">
+                    </div></div>
+                   </div>
+                   <div class="row">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="pass1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="pass1">
+                          </div>
+
+                    </div>
+                    <div class="col-6"><div class="mb-3">
+                        <label for="pass1" class="form-label">Confrim Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="pass2">
+                      </div></div>
+                   </div>
+                  
+                  
+                  
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="submit">submit</button>
+                      </div>
+                </form>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+
+</html>

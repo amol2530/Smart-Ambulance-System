@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <!-- <link href="{% static 'css/style.css' %}" rel="stylesheet"> -->
+    <title>Document</title>
+    <style>
+        /* body{
+            background-color: black;
+            color:antiquewhite ; */
+        /* } */
+        body{
+          
+        background: url('/static/images/ho.jpg') no-repeat top fixed; width:100%; height:100vh;
+        background-size: cover;
+        position: relative;
+    } 
+    </style>
+</head>
+<body>
+    <div class="container my-5 " >
+        <div class="row">
+            <div class="col-sm-12 col-lg-12 col-xl-12">
+        <h1 style="text-align:center; background-color:darkmagenta"> All contacts Users</h1>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone no</th>
+            <th scope="col">Query</th>
+ 
+          </tr>
+        </thead>
+        <tbody>
+            {% for fm in forms %}
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{fm.name}}</td>
+            <td>{{fm.email}}</td>
+            <td>{{fm.phone}}</td>
+            <td>{{fm.desc}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      
+    </div>
+
+
+
+</div>
+</div>
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>

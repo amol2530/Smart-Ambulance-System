@@ -1,0 +1,162 @@
+{% load static %}
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style8.css' %}" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container ">
+        <h1 style="text-align:center; color: aliceblue; background-color:black">Book Ambulance </h1>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="fname" name="fname">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lname" name="lname"
+                                    aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                    </div>
+                    
+                  
+                    
+                    <div class="mb-3">
+                        <label for="typeambulance" class="form-label">Full Address</label>
+                        <input type="text" class="form-control" id="address" name="address">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Contact No</label>
+                        <input type="phone" class="form-control" id="uphone" name="uphone">
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="validationCustom04" class="form-label">Type Ambulance</label>
+                            <select class="form-select" id="validationCustom04" name="tambulance" required>
+                                <option selected disabled value="">....</option>
+                                <option>Basic Ambulance</option>
+                                <option>Advance Ambulance</option>
+                                <option>Mortuary Ambulance</option>
+                                <option>Patient Transport Vehicle</option>
+                                <option>Air Ambulance</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="age" class="form-label">Age</label>
+                                <input type="text" class="form-control" id="age" name="age">
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Gender</label></div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                           
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender"
+                                        id="gender">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Male
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender"
+                                        id="gender">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Female
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender"
+                                        id="gender">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Other
+                                    </label>
+                                </div>
+                            </div>
+                       
+                    </div><br>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        
+                        <button class="btn btn-primary" type="submit">Book Ambulance</button>
+                      </div>
+                </form>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+
+</html>  {% endcomment %}
+
+
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style8.css' %}" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+<div class="row">
+    <div class="col-sm-8 offset-2">
+        <h1 style="text-align:center; color: aliceblue; background-color:black">Book Ambulance </h1>
+        <form action="" method="post">
+        {% csrf_token %}
+
+        {{form.as_p}}
+
+        <div class="d-grid gap-2">
+                        
+            <button class="btn btn-primary" type="submit">Book Ambulance</button>
+          </div>
+    </form>
+    </div>
+</div>
+</div>
+<script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+
+</html> 

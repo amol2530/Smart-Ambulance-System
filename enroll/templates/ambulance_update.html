@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+  <link href="{% static 'css/style8.css' %}" rel="stylesheet">
+
+  {% comment %} <link href="{% static 'css/style1.css' %}" rel="stylesheet"> {% endcomment %}
+  <title>Document</title>
+  <style>
+   
+  </style>
+</head>
+<body>
+
+    <h1 style="text-align:center; color: aliceblue; background-color:black"> Ambulance Facility </h1>
+<div class="container">
+    <form action="" method="post">
+      {% csrf_token %}
+     
+      {% for fm in form %}
+      <div class="from-group">
+       {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}
+       </div>
+      {% endfor %}
+      <div class="d-grid gap-2">
+      {% comment %} <input type="submit" class="btn btn-primary my-2 " value="Update"> {% endcomment %}
+      <button class="btn btn-primary my-2" type="submit" value="Update"> Update </button>
+  {% comment %} <a href="{% url 'dashboard' %}" class="btn btn-danger" value="cancel">cancel</a> {% endcomment %}
+    </div></div>
+  <script src="{% static 'js/jquery.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  
+<script>
+    {% for message in messages %}
+  swal("   {{message}}");
+  
+  {% endfor %}
+</script>
+
+
+</body>
+</html>

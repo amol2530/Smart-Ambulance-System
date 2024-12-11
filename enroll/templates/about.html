@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        body{
+            /* background-color: blueviolet; */
+            /* color: aliceblue; */
+        }
+        .img-fluid{
+            border: 1px solid;
+            border: radius 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-2">
+   <h1><b> Smart Ambulance System </b></h1>
+
+    <p>
+        An ambulance is a vehicle equipped with medical devices to guarantee the transportation of patients to healthcare institutions such as specialized hospitals and general hospitals. They are designed to allow paramedics access them promptly to provide required treatment and emergency care while transporting patients  In smart ambulance different sensors like heart rate sensor, blood pressure, ECG will be judging status of vital parameters, the status of these parameters will be send to hospital's database simultaneously traffic signals will be operated by using GPRS message through cloud. 
+        After getting status of vital parameters, hospital authorities will plan accordingly.
+        As the smart ambulance will reach within range of 100m, signal will be turned to green if it is red,
+         the communication between smart ambulances will be done by GPRS through cloud. 
+        Our system ensures quick response for emergency situations by automatically controlling traffic signals on the path of the ambulances.
+
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum culpa quos illo eveniet dignissimos nulla aliquid. 
+    Voluptatibus quod animi quasi ipsam perspiciatis maxime, porro similique inventore in rem corrupti eligendi?</p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.Laboriosam, maxime eaque dolorum labore quae perferendis 
+        mollitia sapiente nulla sunt illo! Ratione debitis harum doloribus esse excepturi incidunt enim explicabo voluptatem.
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, enim voluptatem itaque consectetur, nam nemo eaque 
+         assumenda cupiditate provident, tempora voluptate. 
+        Cumque dicta, soluta voluptatem iste numquam harum. Deserunt, nihil. </p>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+            Consequuntur aperiam veniam aspernatur earum inventore, tempore deleniti velit libero, 
+            accusantium atque accusamus doloremque praesentium temporibus repellat? Impedit neque ullam eligendi nobis?
+        </p>
+        <div class="container my-3">
+        <div class="row">
+            <div class="col-md-2 col-sm-2 col-xl-2"><img src="{% static 'images/ff.png' %}" alt="image" class="img-fluid"><span>basic Ambulance</span></div>
+            <div class="col-md-2 col-sm-2 col-xl-2">
+                <img src="{% static 'images/jj.png' %}" alt="image" class="img-fluid">Advance Ambulance</div>
+            <div class="col-md-2 col-sm-2 col-xl-2"><img src="{% static 'images/mm.png' %}" alt="image" class="img-fluid">
+                Neonatal Ambulance</div>
+            <div class="col-md-2 col-sm-2 col-xl-2"><img src="{% static 'images/bb.png' %}" alt="image" class="img-fluid">
+                Mortuary Ambulance</div>
+            <div class="col-md-2 col-sm-2 col-xl-2"><img src="{% static 'images/nk.png' %}" alt="image" class="img-fluid">
+                Patient Transport Ambulance</div>
+            <div class="col-md-2 col-sm-2 col-xl-2"><img src="{% static 'images/fm.png' %}" alt="image" class="img-fluid">
+                Air Ambulance</div>
+        </div>
+        </div>
+        <b> Unique Features of Smart Ambulance System:</b> the app are provied  different types of ambulance
+      
+    </div>
+</body>
+</html>

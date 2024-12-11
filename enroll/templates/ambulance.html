@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style19.css' %}" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align:center; color: aliceblue; background-color:black"> Ambulance Facility </h1>
+      {% comment %} {% if  forms %}
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col"> Ambulance Type</th>
+            <th scope="col">Facility</th>
+           
+            {% comment %} <th scope="col">Driver name</th>
+            <th scope="col">Driver mobile No</th>
+            <th scope="col">Action</th> {% endcomment %}
+          {% comment %} </tr>
+        </thead>
+        <tbody>  {% endcomment %}
+            {% for fm in forms  %}
+            {% comment %} {% for post in posts %} {% endcomment %}
+    <div class="jumbotron jumbotron-fluied mx-5 ">
+        <div class="container">
+            <h1 class="display-4"> {{fm.city}}</h1>
+            <p class="lead">{{fm.name}} </p>
+            <p class="lead">{{fm.fac1}} </p>
+            <p class="lead">{{fm.fac2}} </p>
+            <p class="lead">{{fm.fac3}} </p>
+            </div>
+            <a href="{% url 'ambulance_update' fm.id %}" class="btn btn-warning btn-sm" type="submit">edit</a>
+    </div>
+    {% endfor %}
+          {% comment %} <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td colspan="">{{fm.city}}</td>
+            <td colspan="">{{fm.name}}</td>
+            <br>
+            <td colspan="">{{fm.fac1}}</td>
+            <td colspan="">{{fm.fac2}}</td>
+            <td colspan="">{{fm.fac3}}</td>
+            
+             
+             <td colspan=""><a href="{% url 'user_bookambulance' fm.id   %}" class="btn btn-primary" type="submit"> Edit</a>  </td>            
+             
+          </tr>
+          {% endfor %}</tbody></table>{% endif %} {% endcomment %}
+    </div></div>
+    <script src="{% static 'js/jquery.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>
